@@ -1,0 +1,318 @@
+// Importando Cores
+@import "./cores/cores.scss";
+// Importando Fonts
+@import "./fonts/fonts.scss";
+// Configurações Globais
+* { // Globais
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+
+main { // Main
+    width: 100%;
+    height: 100%;
+    background-color: $cinza-ardosia-escuro-cor;
+
+    #container__Principal { // Container Principal
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0px;
+        background-color: $branco-cor;
+
+        #container__Informacoes { // Container de Informações
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 30px 20px;
+            gap: 20px;
+
+            #container__descricao { // Container de Descrição
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                h1 { // Título
+                    color: $cinza-ardosia-escuro-cor;
+                    font-size: 2em;
+                    font-weight: $weight-700;
+                }
+
+                p { //  Paragrafo
+                    font-size: $font-paragrafo;
+                }
+
+                ul { // Lista
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-content: center;
+                    gap: 20px;
+
+                    li { // Lista de itens
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 10px;
+
+                        img { // Imagem
+                            width: 18px;
+                            height: 18px;
+                        }
+
+                        p { // Paragrafo
+                            align-content: center;
+                            font-size: $font-paragrafo;
+                        }
+
+                    }
+
+
+
+                }
+            }
+
+            form { // Form
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                div { // Div de erro
+                    display: flex;
+                    justify-content: space-between;
+                    align-content: center;
+
+                    label { // Label
+                        font-size: $font-paragrafo;
+                        font-weight: $weight-700;
+                    }
+
+                    p { // Paragrafo de erro
+                        font-size: $font-paragrafo;
+                        display: none;
+                        color: red;
+                    }
+                }
+
+                input[type="email"] { // Input
+                    font-size: 14px;
+                    padding: 10px 3px 10px 10px;
+                    border-radius: 8px;
+                    border: 1px solid $cinza-cor
+                }
+
+                input[type="submit"] { // Botão
+                    margin-top: 10px;
+                    padding: 1em;
+                    background-color: $cinza-ardosia-escuro-cor;
+                    border-radius: 8px;
+                    border: 1px solid transparent;
+                    font-size: $font-paragrafo;
+                    font-weight: $weight-700;
+                    color: $branco-cor;
+                    letter-spacing: 1px;
+                }
+
+                input[type="submit"]:hover{ // Botão
+                    background-color: $primeira-cor;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        #container__Imagem { // Container de Imagem
+            width: 100%;
+            height: 320px;
+            background-image: url(../img/illustration-sign-up-mobile.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 0 0 20px 20px;
+        }
+    }
+
+    #container__De__Sucesso { // Container de Sucesso
+        width: 100%;
+        height: 100%;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 40px;
+        background-color: $branco-cor;
+        
+
+        article { // Article
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 15px;
+
+            img { // Imagem
+                width: 3.5em;
+            }
+
+            h1 { // Título
+                color: $cinza-ardosia-escuro-cor;
+                width: 50%;
+                font-size: 1.5em;
+            }
+
+            p { // Paragrafo
+                font-size: $font-paragrafo;
+
+                strong {
+                    color: $cinza-ardosia-escuro-cor;
+                }
+            }
+        }
+
+        input { // Botão
+            width: 100%;
+            background-color: $cinza-ardosia-escuro-cor;
+            padding: 1em;
+            color: $branco-cor;
+            font-weight: $weight-700;
+            letter-spacing: 1px;
+            border-radius: 8px;
+            border: 1px solid transparent
+        }
+
+        input:hover { // Botão
+            background-color: $primeira-cor;
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+footer { // Footer
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 20px;
+    font-size: 14px;
+    text-align: center;
+    background-color: $cinza-ardosia-escuro-cor;
+    color: $branco-cor;
+}
+// Media Queries
+@media (width >=575px) { // 575px
+
+    main { // Main
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        padding: 50px;
+
+        #container__Principal { // Container Principal
+            border-radius: 20px;
+            padding: 15px;
+
+            #container__Informacoes { // Container de Informações
+                width: 100%;
+                padding: 20px;
+            }
+
+            #container__Imagem { // Container de Imagem
+                border-radius: 20px;
+                background-image: url(../img/illustration-sign-up-mobile.svg);
+            }
+
+        }
+
+        #container__De__Sucesso { // Container de Sucesso
+            width: 400px;
+            height: 450px;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 20px 30px;
+            border-radius: 10px;
+            background-color: $branco-cor;
+
+            article { // Article
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 15px;
+
+                img { // Imagem
+                    width: 3.5em;
+                }
+
+                h1 { // Título
+                    color: $cinza-ardosia-escuro-cor;
+                    width: 50%;
+                    font-size: 1.9em;
+                }
+
+                p { // Paragrafo
+                    font-size: $font-paragrafo;
+
+                    strong { // Strong
+                        color: $cinza-ardosia-escuro-cor;
+                    }
+                }
+            }
+        }
+    }
+
+    footer { // Footer
+        background-color: $branco-cor ;
+        color: $cinza-ardosia-escuro-cor;
+
+    }
+
+}
+
+@media (width >=768px) { // 768px
+    main { // Main
+        height: 100dvh;
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+        #container__Principal { // Container Principal
+            flex-direction: row;
+            border-radius: 20px;
+            padding: 15px;
+            width: 700px;
+
+            #container__Imagem { // Container de Imagem
+                border-radius: 20px;
+                height: 100%;
+                background-image: url(../img/illustration-sign-up-desktop.svg);
+            }
+
+        }
+
+        #container__De__Sucesso { // Container de Sucesso
+            width: 400px;
+            height: 400px;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: $branco-cor;
+        }
+
+    }
+
+}
