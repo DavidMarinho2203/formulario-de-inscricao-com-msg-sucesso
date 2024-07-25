@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/css/estilo.css">
+  <script src="./assets/js/index.js" defer></script>
+  <title>Frontend Mentor | Formulário de inscrição com mensagem de sucesso.</title>
+</head>
+
+<body>
+  <main>
+    <section id="container__Principal">
+      <article id="container__Informacoes">
+        <div id="container__descricao">
+          <h1>Ficar atualizado!</h1>
+          <p>Junte-se a mais de 60.000 gerentes de produto que recebem atualizações mensais sobre:</p>
+          <ul>
+            <li>
+              <img src="./assets/img/icon-list.svg" alt="icone de destaque">
+              <p>Descoberta de produtos e construção do que importa</p>
+            </li>
+            <li>
+              <img src="./assets/img/icon-list.svg" alt="icone de destaque">
+              <p>Medir para garantir que a atualização seja um sucesso</p>
+            </li>
+            <li>
+              <img src="./assets/img/icon-list.svg" alt="icone de destaque">
+              <p>E muito mais</p>
+            </li>
+          </ul>
+        </div>
+        <form>
+          <div>
+            <label for="inEmail">Endereço de Email</label>
+            <p id="erroDeEmail">E-mail válido obrigatório</p>
+          </div>
+          <input type="email" id="inEmail">
+          <input type="submit" value="Assine a newsletter mensal" placeholder="email@company.com">
+        </form>
+      </article>
+      <div id="container__Imagem">
+      </div>
+    </section>
+
+    <section id="container__De__Sucesso">
+      <article>
+        <img src="./assets/img/icon-success.svg" alt="icone de sucesso">
+        <h1>Grato pela assinatura!</h1>
+        <p>Um email de confirmação foi enviado para <strong id="email-cadastrado"></strong>. Por favor, abra-o e clique no botão dentro para confirmar sua assinatura</p>
+      </article>
+      <input id="btn_resetar" type="button" value="Dispensar mensagem"></input>
+    </section>  
+  </main>
+  <footer>
+    <p>Todos os direitos reservados para o desenvolvedor <strong>David Beckham</strong></p>
+  </footer>
+</body>
+
+</html>
